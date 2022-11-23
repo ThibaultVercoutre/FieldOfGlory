@@ -1,0 +1,41 @@
+for(int i = 0; i < 2; i++){
+    printf("Main tirage joueur %d\n", i);
+    printf("==================\n");
+    PTR_CARTE_JEU tmp1 = jeu->joueurs[i]->paquet_tirage;
+    for(int i = 0; i < 24; i++){
+      printf("%d : %s\n", i, tmp1->nom);
+      tmp1 = tmp1->suivant;
+    }
+    printf("==================\n");
+  }
+
+
+
+
+PTR_CARTE_JEU temp = p_tirage;
+          while (temp->suivant != NULL) {
+      temp = temp->suivant;
+                  //printf("%s\n", temp->nom);
+        }
+    printf("%d\n", carte_n);
+
+
+
+
+
+
+switch(jeu->plateau[i][j]->n_carte){
+    case 0 : tot_pts += elephant(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 1 : tot_pts += spear(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 2 : tot_pts += archers(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 3 : tot_pts += light_cavalry(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 4 : tot_pts += light_infantry(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 5 : tot_pts += medium_infantry(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 6 : tot_pts += cavalry(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 7 : tot_pts += heavy_infantry(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 8 : tot_pts += pike(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 9 : tot_pts += commander(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 10 : tot_pts += overlap(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    case 11 : tot_pts += reserves(jeu->plateau[i][j],jeu->plateau[(Snd_carte - 1) / 5 + tour % 2 * 3][j],jeu->plateau[i2][j2]); break;
+    default : break;
+  }
